@@ -79,6 +79,18 @@ header.container {
 .nav-links a#mode-icon:hover::after {
     width: 0; /* No underline effect for the mode icon */
 }
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: inherit;
+}
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
 .light-mode {
     background-color: #fff; /* Light mode background */
     color: black; /* Light mode text color */
@@ -166,67 +178,6 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header.container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-    .nav-links a {
-        font-size: 16px;
-    }
-    .intro h1 {
-        font-size: 36px;
-    }
-    .intro p {
-        font-size: 18px;
-    }
-    .read-more {
-        font-size: 16px;
-    }
-    .blog-card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header.container {
-        padding: 5px 10px;
-    }
-    .nav-links {
-        gap: 5px;
-    }
-    .nav-links a {
-        font-size: 14px;
-    }
-    .intro h1 {
-        font-size: 28px;
-    }
-    .intro p {
-        font-size: 16px;
-    }
-    .read-more {
-        font-size: 14px;
-    }
-}
-
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: inherit;
-}
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-@media (max-width: 768px) {
     .hamburger-menu {
         display: block;
     }
@@ -260,6 +211,7 @@ section {
         width: 100%;
     }
 }
+
 @media (max-width: 480px) {
     header.container {
         padding: 5px 10px;
