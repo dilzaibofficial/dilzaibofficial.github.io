@@ -176,11 +176,4 @@ window.onload = function () {
             modeIcon.innerHTML = '<i class="fas fa-sun"></i>';
         }
     });
-
-    // Hamburger menu toggle
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
 };
