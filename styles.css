@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Default dark mode background */
+    color: white; /* Default dark mode text color */
+    transition: background-color 0.5s, color 0.5s;
+}
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+header.container {
+    position: fixed;
+    top: 20px; /* Margin from top */
+    left: 20px; /* Padding from left */
+    right: 20px; /* Padding from right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: inherit; /* Inherit color from the section */
+    z-index: 10;
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: color 0.5s;
+    background: none; /* Remove background */
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.5s;
+    position: relative;
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: linear-gradient(to right, #de1d8d, #DE1D75);
+    transition: width 0.3s ease, right 0.3s ease;
+}
+.logo:hover::after {
+    width: 100%;
+    right: 0;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: inherit; /* Inherit color from the section */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.5s;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: linear-gradient(to right, #de1d8d, #DE1D75);
+    transition: width 0.3s ease, right 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+    right: 0;
+}
+.nav-links a#mode-icon:hover::after {
+    width: 0; /* No underline effect for the mode icon */
+}
+.light-mode {
+    background-color: #fff; /* Light mode background */
+    color: black; /* Light mode text color */
+}
+.light-mode header.container {
+    color: inherit; /* Inherit color from the section */
+}
+.light-mode .nav-links a {
+    color: inherit; /* Inherit color from the section */
+}
+section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    transition: background-color 0.5s, color 0.5s;
+}
+#home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: inherit; /* Inherit color from the section */
+}
+.intro {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.intro p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.read-more {
+    font-size: 18px;
+    color: inherit; /* Inherit color from the section */
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+.read-more:hover {
+    color: #de1d8d; /* Change text color on hover */
+}
+#blog {
+    background-color: #fff;
+    color: #000;
+}
+#about {
+    background-color: #f4f4f4;
+    color: #000;
+}
+#contact {
+    background-color: #e0e0e0;
+    color: #000;
+}
+.light-mode #blog,
+.light-mode #about,
+.light-mode #contact {
+    background-color: inherit; /* Inherit background color from light mode */
+    color: inherit; /* Inherit text color from light mode */
+}
+.blog-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.blog-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s;
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+}
