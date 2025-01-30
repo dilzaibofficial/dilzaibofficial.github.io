@@ -79,18 +79,6 @@ header.container {
 .nav-links a#mode-icon:hover::after {
     width: 0; /* No underline effect for the mode icon */
 }
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: inherit;
-}
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
 .light-mode {
     background-color: #fff; /* Light mode background */
     color: black; /* Light mode text color */
@@ -178,22 +166,14 @@ section {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
+    header.container {
+        padding: 10px 20px;
+    }
+    .logo {
+        font-size: 20px;
     }
     .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    header.container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
+        gap: 15px;
     }
     .nav-links a {
         font-size: 16px;
@@ -216,8 +196,11 @@ section {
     header.container {
         padding: 5px 10px;
     }
+    .logo {
+        font-size: 18px;
+    }
     .nav-links {
-        gap: 5px;
+        gap: 10px;
     }
     .nav-links a {
         font-size: 14px;
