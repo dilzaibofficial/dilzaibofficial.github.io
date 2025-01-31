@@ -15,14 +15,14 @@ canvas {
     z-index: -1;
 }
 header.container {
-    position: fixed;
+    /* position: fixed; */
     top: 20px; /* Margin from top */
     left: 20px; /* Padding from left */
     right: 20px; /* Padding from right */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 50px 50px;
     color: inherit; /* Inherit color from the section */
     z-index: 10;
     border-radius: 10px; /* Optional: rounded corners */
@@ -100,25 +100,28 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
     height: 100vh;
+    padding-left: 50px; /* Add padding to the left */
+    padding-right: 50px; /* Add padding to the right */
     color: inherit; /* Inherit color from the section */
 }
 .intro {
     position: relative;
     z-index: 1;
-    text-align: center;
+    text-align: left; /* Align text to the left */
+    margin-top: -370px; /* Move the section slightly higher */
 }
 .intro h1 {
-    font-size: 48px;
+    font-size: 96px; /* Increase font size */
     margin-bottom: 20px;
 }
 .intro p {
-    font-size: 24px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 .read-more {
-    font-size: 18px;
+    font-size: 25px;
     color: inherit; /* Inherit color from the section */
     text-decoration: none;
     border-bottom: 2px solid currentColor;
@@ -179,7 +182,7 @@ section {
         font-size: 16px;
     }
     .intro h1 {
-        font-size: 36px;
+        font-size: 48px; /* Adjust font size for smaller screens */
     }
     .intro p {
         font-size: 18px;
@@ -206,7 +209,7 @@ section {
         font-size: 14px;
     }
     .intro h1 {
-        font-size: 28px;
+        font-size: 36px; /* Adjust font size for smaller screens */
     }
     .intro p {
         font-size: 16px;
