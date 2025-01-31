@@ -42,13 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Hamburger menu toggle
-    const hamburgerMenu = document.getElementById('hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
     // Canvas animation setup
     function n(e) {
         this.init(e || {});
@@ -176,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var ctx,
         f,
         e = 0,
-        pos = {},
+        pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 },
         lines = [],
         E = {
             debug: true,
@@ -217,5 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.running = true;
         });
         resizeCanvas();
+        render(); // Start the animation
     };
 });

@@ -15,7 +15,6 @@ canvas {
     z-index: -1;
 }
 header.container {
-    /* position: fixed; */
     top: 20px; /* Margin from top */
     left: 20px; /* Padding from left */
     right: 20px; /* Padding from right */
