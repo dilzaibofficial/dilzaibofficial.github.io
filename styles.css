@@ -137,6 +137,69 @@ section {
 #about {
     background-color: #f4f4f4;
     color: #000;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s, color 0.5s;
+}
+#about .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+#about .description {
+    flex: 1;
+    max-width: 50%;
+}
+#about .description h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+#about .description p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+#about .profile-pic {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+#about .profile-pic img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+#about .hire-me {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #de1d8d;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+#about .hire-me:hover {
+    background-color: #c0176b;
+}
+#about .social-media {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+#about .social-media a {
+    color: #000;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+#about .social-media a:hover {
+    color: #de1d8d;
 }
 #contact {
     background-color: #e0e0e0;
@@ -292,4 +355,21 @@ section {
         flex-direction: column;
         gap: 20px;
     }
+}
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Copyright text */
+footer .copyright {
+    font-size: 12px;
+    margin-top: 20px;
 }
