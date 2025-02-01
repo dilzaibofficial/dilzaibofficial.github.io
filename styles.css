@@ -28,7 +28,7 @@ header.container {
     transition: color 0.5s;
     background: none; /* Remove background */
 }
-.logo {
+.logo{
     font-size: 24px;
     font-weight: bold;
     transition: color 0.5s;
@@ -170,8 +170,8 @@ section {
     text-align: center;
 }
 #about .profile-pic img {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Maintain aspect ratio */
 }
 #about .hire-me {
     display: inline-block;
@@ -200,6 +200,21 @@ section {
 }
 #about .social-media a:hover {
     color: #de1d8d;
+}
+#about .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+#about .additional-info img {
+    max-width: 100%;
+    height: auto;
+}
+#about .additional-info div {
+    width: 100%;
+    text-align: center;
 }
 #contact {
     background-color: #e0e0e0;
@@ -325,7 +340,37 @@ section {
     }
     .contact-container {
         flex-direction: column;
+        align-items: center; /* Center align items */
         gap: 20px;
+    }
+    .contact-form, .contact-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    #about {
+        padding: 50px 20px; /* Adjust padding for smaller screens */
+    }
+    #about .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #about .description, #about .profile-pic {
+        max-width: 100%;
+        text-align: center;
+    }
+    #about .description p {
+        font-size: 16px;
+    }
+    #about .profile-pic img {
+        max-width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    #about .additional-info {
+        gap: 15px;
+    }
+    #about .additional-info img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -353,7 +398,29 @@ section {
     }
     .contact-container {
         flex-direction: column;
+        align-items: center; /* Center align items */
         gap: 20px;
+    }
+    .contact-form, .contact-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    #about {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+    #about .description p {
+        font-size: 14px;
+    }
+    #about .profile-pic img {
+        max-width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    #about .additional-info {
+        gap: 10px;
+    }
+    #about .additional-info img {
+        max-width: 100%;
+        height: auto;
     }
 }
 footer {
@@ -366,7 +433,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 
 /* Copyright text */
 footer .copyright {
